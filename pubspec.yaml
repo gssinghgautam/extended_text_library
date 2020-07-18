@@ -5,8 +5,7 @@ author: zmtzawq <zmtzawqlp@live.com>
 homepage: https://github.com/fluttercandies/extended_text_library
 
 environment:
-  sdk: ">=2.6.0 <3.0.0"
-  flutter: ">=1.17.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:

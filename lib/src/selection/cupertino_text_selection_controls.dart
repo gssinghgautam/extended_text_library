@@ -299,6 +299,7 @@ class ExtendedCupertinoTextSelectionControls extends TextSelectionControls {
     Offset position,
     List<TextSelectionPoint> endpoints,
     TextSelectionDelegate delegate,
+      ClipboardStatusNotifier notifier,
   ) {
     assert(debugCheckHasMediaQuery(context));
     final MediaQueryData mediaQuery = MediaQuery.of(context);
@@ -358,7 +359,7 @@ class ExtendedCupertinoTextSelectionControls extends TextSelectionControls {
     }
 
     addToolbarButtonIfNeeded(localizations.cutButtonLabel, canCut, handleCut);
-    addToolbarButtonIfNeeded(localizations.copyButtonLabel, canCopy, handleCopy);
+    addToolbarButtonIfNeeded(localizations.copyButtonLabel, canCopy, (TextSelectionDelegate s) => handleCopy(s, notifier));
     addToolbarButtonIfNeeded(localizations.pasteButtonLabel, canPaste, handlePaste);
     addToolbarButtonIfNeeded(localizations.selectAllButtonLabel, canSelectAll, handleSelectAll);
 

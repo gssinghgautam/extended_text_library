@@ -343,6 +343,7 @@ class ExtendedTextSelectionOverlay {
           midpoint,
           endpoints,
           selectionDelegate,
+          ClipboardStatusNotifier(value: ClipboardStatus.pasteable)
         ),
       ),
     );
